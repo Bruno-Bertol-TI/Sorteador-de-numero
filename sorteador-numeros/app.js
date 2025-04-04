@@ -17,13 +17,29 @@ function sortear() {
         listaDeNumGerados.push(numeroGerado);
     }
 
-    limparInputs()
+    exibirNumeros();
+    let btnReiniciar = document.getElementById('btn-reiniciar');
+    btnReiniciar.classList.replace('container__botao-desabilitado', 'container__botao');
+    listaDeNumGerados = [];
+}
+
+function exibirNumeros() {
+    let texto = document.getElementById('resultado');
+    texto.innerHTML = 'Números sorteados: ' + listaDeNumGerados.join(', ');
+}
+
+function reiniciar() {
+    limparInputs();
+    limparnumeros();
 }
 
 function limparInputs() {
-    document.getElementById('quantidade').value = "";
-    document.getElementById('de').value = "";
-    document.getElementById('ate').value = "";
+    document.getElementById('quantidade').value = '';
+    document.getElementById('de').value = '';
+    document.getElementById('ate').value = '';
+}
 
-    listaDeNumGerados = [];
+function limparnumeros() {
+    let texto = document.getElementById('resultado');
+    texto.innerHTML = 'Números serão sorteados... insira os valores acima e clique em [Sortear]';
 }
