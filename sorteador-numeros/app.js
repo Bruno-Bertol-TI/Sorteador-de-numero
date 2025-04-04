@@ -16,4 +16,14 @@ function sortear() {
 
         listaDeNumGerados.push(numeroGerado);
     }
+
+    limparInputs()
+}
+
+function limparInputs() {
+    document.getElementById('quantidade').value = "";
+    document.getElementById('de').value = "";
+    document.getElementById('ate').value = "";
+
+    listaDeNumGerados = [];
 }
