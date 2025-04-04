@@ -11,7 +11,7 @@ function sortear() {
     for (let i = 1; i <= qtdNumGerar; i++) {
 
         do {
-            numeroGerado = parseInt(Math.random() * qtdNumGerarAte + 1);
+            numeroGerado = parseInt(Math.random() * (qtdNumGerarAte - qtdNumGerarDe + 1)) + parseInt(qtdNumGerarDe);
         } while (listaDeNumGerados.includes(numeroGerado));
 
         listaDeNumGerados.push(numeroGerado);
